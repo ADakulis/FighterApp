@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+.form-group label {
+  color: grey;
+  padding-left:40VW;
+  padding-bottom: 10px;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+.display-4{
+  padding-top: 40px;
+  padding-bottom: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-group input{
+  font-weight: 500;
+  text-align: left;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.form-group input::placeholder{
+  color: #c0bdbd;
+  font-weight: 300;
+}
+
+thead th{
+  font-weight: 400;
+}
+
+table tbody tr:hover{
+  background-color: #fffbf2;
+  cursor: pointer;
+}
+
+input.invalid{
+  border-color: RED;
+}
+
+
