@@ -1,0 +1,24 @@
+<form>
+  <input type="hidden" name="id"
+  value="service.formData.id"/>
+
+  <div class="form-group">
+    <label>Fighter nickname</label>
+    <input class="form-control form-control -lg" placeholder="Nickname"/>
+    <--name="nickname" #nickname="ngModel" [(ngModel)]="service.formData.id"/--!>
+  </div>
+
+  <div class="form-group">
+    <label>Fighter fightstyle</label>
+    <input class="form-control form-control -lg" placeholder="Fightstyle"
+          <-- name="fightstyle" #fightstyle="ngModel" [(ngModel)]="service.formData.fightstyle"/>--!>
+  </div>
+
+  <div class="form-group">
+    <label>Fighter wins</label>
+    <input class="form-control form-control -lg" placeholder="Win amount" type="number"
+           <--name="wins" #wins="ngModel" [(ngModel)]="service.formData.id"/>--!>
+  </div>
+
+
+</form>
