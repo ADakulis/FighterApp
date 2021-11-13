@@ -2,4 +2,27 @@
   <h1 class="display-4 text-center">New fighter register</h1>
 </div>
 
+
 <app-fighter-detail-form></app-fighter-detail-form>
+
+<h1 class="display-4 text-center">Current fighter list</h1>
+<table class="table">
+  <thead class="thread-light">
+      <tr>
+        <th>Hero Nickname</th>
+        <th>Hero Fightstyle</th>
+        <th>Hero Wins</th>
+        <th></th>
+      </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let fd of service.list">
+    <td (click)="populateForm(fd)">{{fd.nickname}}</td>
+    <td (click)="populateForm(fd)">{{fd.fightstyle}}</td>
+    <td>{{fd.wins}}</td>
+    <td>
+      <i class="far fa-trash-alt fa-lg text-danger"></i>
+    </td>
+  </tr>
+  </tbody>
+</table>

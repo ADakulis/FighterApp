@@ -16,6 +16,13 @@ export class FighterDetailFormComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
+    if(this.service.formData.id == '')
+      this.insertRecord(form);
+    else
+      this.updateRecord(form);
+  }
+
+  insertRecord(form:NgForm){
     this.service.postFighterDetail().subscribe(
       res=>{
         alert("Fighter added!");
@@ -24,6 +31,17 @@ export class FighterDetailFormComponent implements OnInit {
       err=>{console.log(err);}
     );
   }
+
+  updateRecord(form:NgForm){
+    this.service.putFighterDetail().subscribe(
+      res=>{
+        alert("Fighter updated!");
+        this.resetForm(form);
+      },
+      err=>{console.log(err);}
+    );
+  }
+
 
   resetForm(form:NgForm){
     form.form.reset();

@@ -1,6 +1,6 @@
-<form novalidate #form="ngForm" (submit)="onSubmit(form)">
+<form novalidate #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <input type="hidden" name="id"
-  value="service.formData.id"/>
+  value="service.formdata.id"/>
 
   <div class="form-group">
     <label>Fighter nickname</label>
