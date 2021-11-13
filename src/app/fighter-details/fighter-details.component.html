@@ -19,9 +19,9 @@
   <tr *ngFor="let fd of service.list">
     <td (click)="populateForm(fd)">{{fd.nickname}}</td>
     <td (click)="populateForm(fd)">{{fd.fightstyle}}</td>
-    <td>{{fd.wins}}</td>
+    <td (click)="populateForm(fd)">{{fd.wins}}</td>
     <td>
-      <i class="far fa-trash-alt fa-lg text-danger"></i>
+      <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(fd.id)"></i>
     </td>
   </tr>
   </tbody>

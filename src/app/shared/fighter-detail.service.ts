@@ -21,6 +21,10 @@ export class FighterDetailService {
     return this.http.put(`${this.baseURL}/${this.formData.id}`, this.formData);
   }
 
+  deleteFighterDetail(id:string){
+    return this.http.delete(`${this.baseURL}/${id}`);
+  }
+
   refreshList(){
     this.http.get(this.baseURL)
       .toPromise()

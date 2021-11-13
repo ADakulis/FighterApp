@@ -25,6 +25,7 @@ export class FighterDetailFormComponent implements OnInit {
   insertRecord(form:NgForm){
     this.service.postFighterDetail().subscribe(
       res=>{
+        this.service.refreshList();
         alert("Fighter added!");
         this.resetForm(form);
       },
@@ -35,6 +36,7 @@ export class FighterDetailFormComponent implements OnInit {
   updateRecord(form:NgForm){
     this.service.putFighterDetail().subscribe(
       res=>{
+        this.service.refreshList();
         alert("Fighter updated!");
         this.resetForm(form);
       },

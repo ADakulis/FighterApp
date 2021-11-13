@@ -19,4 +19,17 @@ export class FighterDetailsComponent implements OnInit {
     this.service.formData = Object.assign({},selecedRecord);
   }
 
+  onDelete(id:string) {
+    if (confirm('Are you sure to delete this fighter?')) {
+      this.service.deleteFighterDetail(id).subscribe(
+        res => {
+          this.service.refreshList();
+          alert("Fighter deleted!");
+        },
+        err => {
+          console.log(err)
+        }
+      )
+    }
+  }
 }
