@@ -13,6 +13,16 @@
   text-transform: uppercase;
 }
 
+.btn-text-center{
+  text-align: center;
+}
+
+.btn-text-center button{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+
 .form-group input{
   font-weight: 500;
   text-align: left;
@@ -20,6 +30,12 @@
   margin: auto;
   margin-bottom: 20px;
 }
+/*
+.btn{
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: auto;
+}*/
 
 .form-group input::placeholder{
   color: #c0bdbd;

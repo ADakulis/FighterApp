@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FighterDetailService} from "../../shared/fighter-detail.service";
 import {NgForm} from "@angular/forms";
+import {FighterDetail} from "../../shared/fighter-detail.model";
 
 @Component({
   selector: 'app-fighter-detail-form',
@@ -17,10 +18,17 @@ export class FighterDetailFormComponent implements OnInit {
   onSubmit(form:NgForm){
     this.service.postFighterDetail().subscribe(
       res=>{
-
+        alert("Fighter added!");
+        this.resetForm(form);
       },
       err=>{console.log(err);}
     );
+  }
+
+  resetForm(form:NgForm){
+    form.form.reset();
+    this.service.formData = new FighterDetail();
+
   }
 
 }
