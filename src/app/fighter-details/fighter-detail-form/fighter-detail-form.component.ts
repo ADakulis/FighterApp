@@ -15,7 +15,7 @@ export class FighterDetailFormComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
-    this.service.postPaymentDetail().subscribe(
+    this.service.postFighterDetail().subscribe(
       res=>{
 
       },

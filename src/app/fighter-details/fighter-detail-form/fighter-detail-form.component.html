@@ -1,11 +1,11 @@
-<form novalidate #form="ngForm" (submit)="onSubmit(form)" )>
+<form novalidate #form="ngForm" (submit)="onSubmit(form)">
   <input type="hidden" name="id"
   value="service.formData.id"/>
 
   <div class="form-group">
     <label>Fighter nickname</label>
     <input class="form-control form-control -lg" placeholder="Nickname"
-          name="nickname" #nickname="ngModel" [(ngModel)]="service.formData.id"
+          name="nickname" #nickname="ngModel" [(ngModel)]="service.formData.nickname"
            required maxlength="40" minlength="3"
     />
   </div>

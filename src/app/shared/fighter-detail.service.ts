@@ -12,7 +12,7 @@ export class FighterDetailService {
   formData:FighterDetail = new FighterDetail();
   readonly baseURL = 'https://localhost:5001/api/fighters';
 
-  postPaymentDetail(){
+  postFighterDetail(){
     return this.http.post(this.baseURL, this.formData);
   }
 
