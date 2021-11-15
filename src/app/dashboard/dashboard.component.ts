@@ -11,8 +11,7 @@ import {FighterDetail} from "../shared/fighter-detail.model";
 export class DashboardComponent implements OnInit {
   fighterWins: FighterDetail[];
   constructor(public service: FighterDetailService) {
-    this.fighterWins;
-    this.getTop();
+    //this.fighterWins;
   }
 
   getTop(){
@@ -31,6 +30,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.refreshList();
+    this.fighterWins;
+    //this.getTop();
   }
 
 }

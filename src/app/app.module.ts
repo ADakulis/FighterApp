@@ -7,13 +7,15 @@ import { FighterDetailFormComponent } from './fighter-details/fighter-detail-for
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FighterEditFormComponent } from './fighter-details/fighter-edit-form/fighter-edit-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FighterDetailsComponent,
     FighterDetailFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    FighterEditFormComponent
   ],
   imports: [
     BrowserModule,
