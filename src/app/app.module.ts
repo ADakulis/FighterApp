@@ -5,17 +5,21 @@ import { AppComponent } from './app.component';
 import { FighterDetailsComponent } from './fighter-details/fighter-details.component';
 import { FighterDetailFormComponent } from './fighter-details/fighter-detail-form/fighter-detail-form.component';
 import {HttpClientModule} from "@angular/common/http";
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FighterDetailsComponent,
-    FighterDetailFormComponent
+    FighterDetailFormComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

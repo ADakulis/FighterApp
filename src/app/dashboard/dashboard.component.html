@@ -1,0 +1,21 @@
+<h2>Top 3 Fighters</h2>
+
+
+<table class="table">
+  <thead class="thread-light">
+  <tr>
+    <th>Hero Nickname</th>
+    <th>Hero Wins</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let fd of this.fighterWins">
+      <td>{{fd.nickname}}</td>
+      <td>{{fd.wins}}</td>
+
+
+  </tr>
+  </tbody>
+</table>
+
