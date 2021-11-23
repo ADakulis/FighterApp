@@ -13,6 +13,7 @@ export class FighterDetailFormComponent implements OnInit {
   constructor(public service:FighterDetailService) { }
 
   ngOnInit(): void {
+    this.service.formData = new FighterDetail();
   }
 
   onSubmit(form:NgForm){

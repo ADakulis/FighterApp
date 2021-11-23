@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FighterDetailService} from "../shared/fighter-detail.service";
 import {FighterDetail} from "../shared/fighter-detail.model";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-fighter-details',
@@ -10,15 +10,15 @@ import {Router} from "@angular/router";
 })
 export class FighterDetailsComponent implements OnInit {
 
-  constructor(public service: FighterDetailService, private router: Router) { }
+  constructor(public service: FighterDetailService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.service.refreshList();
   }
 
   populateForm(selecedRecord:FighterDetail){
-    //this.service.formData = Object.assign({},selecedRecord);
-    this.router.navigate(['/details']);
+    this.service.formData = Object.assign({},selecedRecord);
+    this.router.navigate(['/detail',selecedRecord.id], { relativeTo: this.route });
   }
 
   onDelete(id:string) {
