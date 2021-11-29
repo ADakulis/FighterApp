@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   constructor(public service: FighterDetailService) {
     //this.fighterWins;
   }
-
+/*
   getTop(){
 
     let i:number=0;
@@ -25,13 +25,25 @@ export class DashboardComponent implements OnInit {
 
 
   }
+*/
+/*
+  getTop() {
+      let dashboard : string = "dashboard";
+      this.service.getFighterTop(dashboard).subscribe(
+        err => {
+          console.log(err)
+        }
+      )
 
+  }
 
-
+*/
   ngOnInit(): void {
-    this.service.refreshList();
-    this.fighterWins;
+    //this.service.refreshList();
+    //this.fighterWins;
     //this.getTop();
+    let dashboard : string = "dashboard";
+    this.service.getFighterTop(dashboard);
   }
 
 }

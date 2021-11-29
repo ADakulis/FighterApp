@@ -44,13 +44,7 @@ export class FighterEditFormComponent implements OnInit {
     this.service.formData = new FighterDetail();
 
   }
-/*
-  getHero(): void {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.FighterDetailService.getHero(id)
-      .subscribe(hero => this.hero = hero);
-  }
-*/
+
 
 
 }

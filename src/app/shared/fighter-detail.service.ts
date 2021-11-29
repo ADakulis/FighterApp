@@ -25,6 +25,12 @@ export class FighterDetailService {
     return this.http.delete(`${this.baseURL}/${id}`);
   }
 
+  getFighterTop(dashboard:string){
+    return this.http.get(`${this.baseURL}/${dashboard}`)
+      .toPromise()
+      .then(res => this.list = res as FighterDetail[]);
+  }
+
   refreshList(){
     this.http.get(this.baseURL)
       .toPromise()
